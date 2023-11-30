@@ -1,6 +1,7 @@
 import 'dart:math';
 
-import 'package:fakemon2/tiposPokemon.dart';
+import 'package:fakemon2/Modelo/tiposPokemon.dart';
+
 import 'package:flutter/cupertino.dart';
 
 import 'AttackStrategy.dart';
@@ -28,7 +29,7 @@ class Fakemon extends ChangeNotifier {
   bool estaParalizado=false;
   bool estaConfundido=false;
 
-  Fakemon(
+  Fakemon (
       {required this.strong,
       required this.speed,
       required this.name,
@@ -38,15 +39,20 @@ class Fakemon extends ChangeNotifier {
       required this.attacks
       });
 
-  void attack(Fakemon opponent, int attackIndex) {
+  String attack(Fakemon opponent, int attackIndex) {
     // Verificamos que el índice del ataque sea válido
     if (attackIndex < 0 || attackIndex >= attacks.length) {
       throw ArgumentError('Invalid attack index');
     }
 
+    int vidaInicial=opponent.hp;
+
     // Obtenemos el ataque correspondiente al índice y lo usamos
     var attack = attacks[attackIndex];
     attack.strategy.attack(this, opponent);
+
+    return '$name uso ${attack.name} sobre ${opponent.name}. Este perdio ${vidaInicial-opponent.hp} puntos de vida';
+
   }
 
   void takeDamage(int damage) {

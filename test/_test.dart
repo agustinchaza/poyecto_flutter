@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:fakemon2/RegistroJugador.dart';
+import 'package:fakemon2/Modelo/RegistroJugador.dart';
 
 void main() {
   group('RegistroJugador', () {

@@ -1,5 +1,7 @@
-import 'package:fakemon2/Menu_Inicial.dart';
+
 import 'package:flutter/material.dart';
+
+import 'Menu_Inicial.dart';
 
 class Navegador_de_Paginas extends StatelessWidget {
   static final Navegador_de_Paginas _instance = Navegador_de_Paginas

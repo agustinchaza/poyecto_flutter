@@ -1,6 +1,7 @@
 import 'dart:math';
 
-import 'package:fakemon2/tiposPokemon.dart';
+import 'package:fakemon2/Modelo/tiposPokemon.dart';
+
 
 import 'Fakemon.dart';
 

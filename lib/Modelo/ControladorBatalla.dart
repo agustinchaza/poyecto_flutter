@@ -47,6 +47,8 @@ void ejecutarEstados(Fakemon rapido, Fakemon lento){
 
   void ingresarAtaque() {
     //implementarMetodo
+
+
   }
 
   void ejecutarAtaque(Fakemon fakemon, Fakemon oponente, int indexAtaque){

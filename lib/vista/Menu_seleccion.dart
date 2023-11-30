@@ -1,4 +1,4 @@
-import 'package:fakemon2/RegistroJugador.dart';
+import 'package:fakemon2/Modelo/RegistroJugador.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
